@@ -513,6 +513,146 @@ section {
 }
 
 /* ═══════════════════════════════════════════════
+   PRICING
+   ═══════════════════════════════════════════════ */
+.pricing {
+  background: var(--pw-surface);
+  border-top: 1px solid var(--pw-border);
+  border-bottom: 1px solid var(--pw-border);
+}
+
+.pricing-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--pw-surface-raised);
+  border: 1px solid var(--pw-border);
+  margin-bottom: 2.5rem;
+}
+
+.pricing-highlight-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--pw-accent);
+}
+
+.pricing-highlight-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pricing-highlight p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.pricing-table-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.pricing-table thead th {
+  text-align: left;
+  padding: 1rem 1.25rem;
+  font-family: 'Russo One', 'Arial Black', system-ui, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pw-text-muted);
+  border-bottom: 2px solid var(--pw-accent);
+}
+
+.pricing-table tbody td {
+  padding: 1rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--pw-text);
+  border-bottom: 1px solid var(--pw-border);
+}
+
+.pricing-table tbody tr:hover {
+  background: rgba(216, 255, 0, 0.03);
+}
+
+.pricing-table tbody td:nth-child(2) {
+  font-weight: 700;
+  color: var(--pw-accent);
+}
+
+.pricing-note {
+  font-size: 0.8rem;
+  color: var(--pw-text-muted);
+  margin-top: 0.75rem;
+}
+
+.founding-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(216, 255, 0, 0.08), rgba(216, 255, 0, 0.02));
+  border: 1px solid var(--pw-accent);
+  margin-bottom: 2.5rem;
+}
+
+.founding-badge {
+  flex-shrink: 0;
+  font-family: 'Russo One', 'Arial Black', system-ui, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--pw-accent);
+  color: var(--pw-accent-contrast);
+  padding: 0.35rem 0.75rem;
+}
+
+.founding-banner p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.founding-banner .accent {
+  color: var(--pw-accent);
+}
+
+.pricing-features {
+  margin-bottom: 2.5rem;
+}
+
+.pricing-cta {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.pricing-cta p {
+  margin: 0 auto;
+  font-size: 0.9375rem;
+}
+
+.pricing-cta .btn {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .pricing-table-wrapper {
+    overflow-x: auto;
+  }
+  .pricing-table {
+    min-width: 400px;
+  }
+  .founding-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ═══════════════════════════════════════════════
    INLINE PHOTOS
    ═══════════════════════════════════════════════ */
 .lifestyle-banner {

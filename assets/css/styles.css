@@ -152,7 +152,7 @@ section {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 10, 10, 0.95);
+  background: var(--pw-surface);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--pw-border);
   padding: 0.75rem 0;
@@ -513,6 +513,94 @@ section {
 }
 
 /* ═══════════════════════════════════════════════
+   INLINE PHOTOS
+   ═══════════════════════════════════════════════ */
+.lifestyle-banner {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.lifestyle-banner img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+}
+
+.inline-photo {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.inline-photo img {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+}
+
+.inline-photo-duo {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.inline-photo-duo img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+}
+
+@media (max-width: 768px) {
+  .inline-photo-duo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .inline-photo-duo img {
+    max-width: 350px;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+   ═══════════════════════════════════════════════ */
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-photo {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-photo img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);
+}
+
+/* ═══════════════════════════════════════════════
    CTA
    ═══════════════════════════════════════════════ */
 .cta {
@@ -554,7 +642,7 @@ section {
 }
 
 .footer-brand img {
-  height: 28px;
+  height: 150px;
   width: auto;
 }
 

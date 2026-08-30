@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /pages/
+
+Sitemap: https://pumpwrk.com/sitemap.xml

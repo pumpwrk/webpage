@@ -5,22 +5,25 @@ block title
 
 block meta
   meta(name="description", content="Política de Cookies de la aplicación Pumpwrk.")
-  link(rel="icon", type="image/x-icon", href="../assets/images/favicon.ico")
-  link(rel="apple-touch-icon", sizes="180x180", href="../assets/images/apple-touch-icon.png")
 
-block content
+block extra-head
+  link(rel="icon", type="image/x-icon", href="/assets/images/favicon.ico")
+  link(rel="apple-touch-icon", sizes="180x180", href="/assets/images/apple-touch-icon.png")
+
+block nav
   nav.nav
     div.nav-inner
-      a.nav-logo(href="../")
-        img(src="../assets/images/logo.png", alt="Pumpwrk Logo")
+      a.nav-logo(href="/")
+        img(src="/assets/images/logo.png", alt="Pumpwrk Logo")
         span Pumpwrk
       ul.nav-links
-        li: a(href="../") Inicio
-        li: a(href="terminos-y-condiciones.html") Términos
-        li: a(href="politica-de-privacidad.html") Privacidad
-        li: a(href="politica-de-cookies.html") Cookies
-        li: a(href="licencia.html") Licencia
+        li: a(href="/") Inicio
+        li: a(href="/pages/terminos-y-condiciones.html") Términos
+        li: a(href="/pages/politica-de-privacidad.html") Privacidad
+        li: a(href="/pages/politica-de-cookies.html") Cookies
+        li: a(href="/pages/licencia.html") Licencia
 
+block content
   main.legal.container
     h1 Política de Cookies
     p.meta Última actualización: 30 de agosto de 2026
@@ -48,47 +51,31 @@ block content
     p La App puede incluir cookies de terceros, como:
     ul
       li Google Analytics (para análisis de uso).
-      li Google Ads (para publicidad).
-      li Facebook Pixel (para marketing).
-    p Estas cookies son gestionadas por terceros y se rigen por sus propias políticas de privacidad.
+      li Proveedores de analítica y métricas de rendimiento.
+      li Plataformas de soporte técnico y chat en vivo.
+    p Cada tercero tiene su propia política de privacidad que regula el uso de sus cookies.
 
     h2 4. Gestión de Cookies
-    p El Usuario puede gestionar las cookies a través de la configuración de su navegador. La mayoría de los navegadores permiten:
+    p El Usuario puede controlar y gestionar las cookies de diversas formas:
     ul
-      li Ver las cookies almacenadas.
-      li Eliminar cookies individuales o todas.
-      li Bloquear cookies de terceros.
-      li Configurar preferencias para sitios específicos.
-    p Sin embargo, deshabilitar cookies puede afectar la funcionalidad de la App.
+      li Configurar las opciones de cookies dentro de la App.
+      li Desactivar las cookies a través de la configuración del navegador.
+      li Eliminar las cookies almacenadas en el dispositivo.
+    p Es importante tener en cuenta que la desactivación de ciertas cookies puede afectar la funcionalidad de la App.
 
-    h2 5. Cookies en la App Móvil
-    p La app móvil de Pumpwrk no utiliza cookies tradicionales, pero puede utilizar tecnologías similares como tokens de autenticación, almacenamiento local y datos de dispositivo para mejorar la experiencia del Usuario.
+    h2 5. Almacenamiento Local
+    p Adicionalmente a las cookies, Pumpwrk utiliza almacenamiento local (localStorage) para:
+    ul
+      li Guardar la preferencia de tema (claro/oscuro).
+      li Mantener la sesión del usuario autenticado.
+      li Almacenar configuraciones locales del usuario.
+    p Este almacenamiento es accesible únicamente por el dominio de Pumpwrk.
 
-    h2 6. Cambios en esta Política
-    p Pumpwrk puede actualizar esta Política de Cookies en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en la App.
+    h2 6. Actualizaciones de la Política
+    p Pumpwrk puede actualizar esta Política de Cookies periódicamente. Cualquier cambio significativo será notificado al Usuario antes de entrar en vigor.
 
     h2 7. Contacto
-    p Si tiene alguna pregunta sobre esta Política de Cookies, puede contactarnos a través de:
+    p Para cualquier consulta sobre nuestras políticas de cookies:
     ul
-      li Correo electrónico: <a href="mailto:hola@pumpwrk.com">hola@pumpwrk.com</a>
-
-  footer.footer
-    div.container
-      div.footer-inner
-        div.footer-brand
-          img(src="../assets/images/logo.png", alt="Pumpwrk Logo")
-          span Pumpwrk
-        div.footer-links
-          div
-            h4 Legal
-            ul
-              li: a(href="terminos-y-condiciones.html") Términos y Condiciones
-              li: a(href="politica-de-privacidad.html") Política de Privacidad
-              li: a(href="politica-de-cookies.html") Política de Cookies
-              li: a(href="licencia.html") Licencia
-      div.footer-bottom
-        p &copy; 2026 Pumpwrk. Todos los derechos reservados.
-
-  script.
-    const savedTheme = localStorage.getItem('pw_theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+      li Correo electrónico: privacidad@pumpwrk.com
+      li Sitio web: www.pumpwrk.com

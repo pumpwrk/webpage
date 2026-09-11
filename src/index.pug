@@ -13,45 +13,27 @@ block meta
   meta(property="og:description", content="La app que transforma la experiencia del gimnasio. Gestiona rutinas, tracking de progreso y más.")
   meta(property="og:type", content="website")
   meta(property="og:url", content="https://pumpwrk.com")
-  meta(property="og:image", content="assets/images/004.jpg")
+  meta(property="og:image", content="/assets/images/004.jpg")
   
   <!-- Twitter -->
   meta(name="twitter:card", content="summary_large_image")
   meta(name="twitter:title", content="Pumpwrk — Tu gimnasio, tu ritmo")
   meta(name="twitter:description", content="La app que transforma la experiencia del gimnasio. Gestiona rutinas, tracking de progreso y más.")
-  meta(name="twitter:image", content="assets/images/004.jpg")
+  meta(name="twitter:image", content="/assets/images/004.jpg")
   
   <!-- Favicon -->
-  link(rel="icon", type="image/x-icon", href="assets/images/favicon.ico")
-  link(rel="icon", type="image/png", sizes="32x32", href="assets/images/favicon-32x32.png")
-  link(rel="icon", type="image/png", sizes="16x16", href="assets/images/favicon-16x16.png")
-  link(rel="apple-touch-icon", sizes="180x180", href="assets/images/apple-touch-icon.png")
-  link(rel="manifest", href="assets/images/site.webmanifest")
+  link(rel="icon", type="image/x-icon", href="/assets/images/favicon.ico")
+  link(rel="icon", type="image/png", sizes="32x32", href="/assets/images/favicon-32x32.png")
+  link(rel="icon", type="image/png", sizes="16x16", href="/assets/images/favicon-16x16.png")
+  link(rel="apple-touch-icon", sizes="180x180", href="/assets/images/apple-touch-icon.png")
+  link(rel="manifest", href="/assets/images/site.webmanifest")
   meta(name="theme-color", content="#0A0A0A")
 
 block content
-  <!-- Navigation -->
-  nav.nav
-    div.nav-inner
-      a.nav-logo(href="/")
-        img(src="assets/images/logo.png", alt="Pumpwrk Logo")
-        span Pumpwrk
-      button.nav-toggle(aria-label="Toggle menu", onclick="document.querySelector('.nav-links').classList.toggle('open')")
-        svg(width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
-          line(x1="3", y1="6", x2="21", y2="6")
-          line(x1="3", y1="12", x2="21", y2="12")
-          line(x1="3", y1="18", x2="21", y2="18")
-      ul.nav-links
-        li: a(href="#features") Características
-        li: a(href="#how-it-works") Cómo funciona
-        li: a(href="#benefits") Beneficios
-        li: a(href="#download") Descargar
-        li: a(href="#pricing") Planes
-
   <!-- Hero Section -->
   section.hero#hero
     div.hero-content
-      img.hero-logo-text.animate-in(src="assets/images/logo-text.png", alt="Pumpwrk")
+      img.hero-logo-text.animate-in(src="/assets/images/logo-text.png", alt="Pumpwrk")
       h1.animate-in.delay-1
         | Tu gimnasio,<br>
         span.accent tu ritmo
@@ -69,7 +51,7 @@ block content
 
   <!-- Lifestyle Banner -->
   div.lifestyle-banner
-    img(src="assets/images/001.jpg", alt="Equipo Pumpwrk entrenando", loading="lazy")
+    img(src="/assets/images/001.jpg", alt="Equipo Pumpwrk entrenando", loading="lazy")
 
   <!-- Features Section -->
   section.features#features
@@ -201,8 +183,8 @@ block content
           p Visualiza estadísticas, records personales y tendencias de fuerza para seguir mejorando.
 
       div.inline-photo.inline-photo-duo
-        img(src="assets/images/002.jpg", alt="Entrenando con Pumpwrk", loading="lazy")
-        img(src="assets/images/003.jpg", alt="Equipo Pumpwrk", loading="lazy")
+        img(src="/assets/images/002.jpg", alt="Entrenando con Pumpwrk", loading="lazy")
+        img(src="/assets/images/003.jpg", alt="Equipo Pumpwrk", loading="lazy")
 
   <!-- Benefits -->
   section#benefits
@@ -222,7 +204,7 @@ block content
         li Integración completa: backend robusto y escalable.
 
       div.inline-photo
-        img(src="assets/images/004.jpg", alt="Equipo Pumpwrk en el gym", loading="lazy")
+        img(src="/assets/images/004.jpg", alt="Equipo Pumpwrk en el gym", loading="lazy")
 
   <!-- Download CTA -->
   section.cta#download
@@ -241,7 +223,7 @@ block content
 
   <!-- Lifestyle Banner 2 -->
   div.lifestyle-banner
-    img(src="assets/images/006.jpg", alt="Pumpwrk comunidad", loading="lazy")
+    img(src="/assets/images/006.jpg", alt="Pumpwrk comunidad", loading="lazy")
 
   <!-- Pricing for Gym Owners -->
   section.pricing#pricing
@@ -339,74 +321,3 @@ block content
             polyline(points="22,6 12,13 2,6")
           | contratar@pumpwrk.com
         p.pricing-note Contáctanos para contratar.
-
-  <!-- Footer -->
-  footer.footer
-    div.container
-      div.footer-inner
-        div.footer-brand
-          img(src="assets/images/logo-text.png", alt="Pumpwrk Logo")
-        div.footer-links
-          div
-            h4 Legal
-            ul
-              li: a(href="pages/terminos-y-condiciones.html") Términos y Condiciones
-              li: a(href="pages/politica-de-privacidad.html") Política de Privacidad
-              li: a(href="pages/politica-de-cookies.html") Política de Cookies
-              li: a(href="pages/licencia.html") Licencia
-          div
-            h4 Producto
-            ul
-              li: a(href="#features") Características
-              li: a(href="#how-it-works") Cómo funciona
-              li: a(href="#download") Descargar
-          div
-            h4 Contacto
-            ul
-              li: a(href="mailto:hola@pumpwrk.com") hola@pumpwrk.com
-      div.footer-bottom
-        p &copy; 2026 Pumpwrk. Todos los derechos reservados.
-
-  <!-- Theme Toggle Script -->
-  script.
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('pw_theme', next);
-      updateThemeIcon(next);
-    }
-
-    function updateThemeIcon(theme) {
-      const icon = document.getElementById('theme-icon');
-      if (theme === 'light') {
-        icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
-      } else {
-        icon.innerHTML = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
-      }
-    }
-
-    function showTab(tab) {
-      document.querySelectorAll('.feature-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.feature-panel').forEach(p => p.classList.remove('active'));
-      document.getElementById('panel-' + tab).classList.add('active');
-      event.target.classList.add('active');
-    }
-
-    // Initialize theme
-    const savedTheme = localStorage.getItem('pw_theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          document.querySelector('.nav-links').classList.remove('open');
-        }
-      });
-    });

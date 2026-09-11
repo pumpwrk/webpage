@@ -5,22 +5,25 @@ block title
 
 block meta
   meta(name="description", content="Licencia de uso de la aplicación Pumpwrk.")
-  link(rel="icon", type="image/x-icon", href="../assets/images/favicon.ico")
-  link(rel="apple-touch-icon", sizes="180x180", href="../assets/images/apple-touch-icon.png")
 
-block content
+block extra-head
+  link(rel="icon", type="image/x-icon", href="/assets/images/favicon.ico")
+  link(rel="apple-touch-icon", sizes="180x180", href="/assets/images/apple-touch-icon.png")
+
+block nav
   nav.nav
     div.nav-inner
-      a.nav-logo(href="../")
-        img(src="../assets/images/logo.png", alt="Pumpwrk Logo")
+      a.nav-logo(href="/")
+        img(src="/assets/images/logo.png", alt="Pumpwrk Logo")
         span Pumpwrk
       ul.nav-links
-        li: a(href="../") Inicio
-        li: a(href="terminos-y-condiciones.html") Términos
-        li: a(href="politica-de-privacidad.html") Privacidad
-        li: a(href="politica-de-cookies.html") Cookies
-        li: a(href="licencia.html") Licencia
+        li: a(href="/") Inicio
+        li: a(href="/pages/terminos-y-condiciones.html") Términos
+        li: a(href="/pages/politica-de-privacidad.html") Privacidad
+        li: a(href="/pages/politica-de-cookies.html") Cookies
+        li: a(href="/pages/licencia.html") Licencia
 
+block content
   main.legal.container
     h1 Licencia de Uso
     p.meta Última actualización: 30 de agosto de 2026
@@ -48,38 +51,14 @@ block content
     h2 5. Terminación
     p Esta Licencia es efectiva hasta que sea terminada. Pumpwrk puede terminar esta Licencia en cualquier momento si el Usuario viola cualquiera de sus términos. Al terminar, el Usuario debe dejar de usar la App y eliminar todas las copias.
 
-    h2 6. Exclusión de Garantías
-    p LA APP SE PROPORCIONA "TAL CUAL" Y "SEGÚN DISPONIBILIDAD", SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.
-    p Pumpwrk no garantiza que la App sea ininterrumpida, segura o libre de errores.
+    h2 6. Limitación de Responsabilidad
+    p La App se proporciona "tal cual" y "tal disponibilidad". Pumpwrk no garantiza que la App sea apropiada para todos los propósitos, y no será responsable por ningún daño directo, indirecto, incidental, especial o consecuente que resulte del uso o incapacidad de uso.
 
-    h2 7. Limitación de Responsabilidad
-    p EN NINGÚN CASO PUMPWRK SERÁ RESPONSABLE POR DAÑOS DIRECTOS, INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES O PUNITIVOS DERIVADOS DEL USO O INCAPACIDAD DE USAR LA APP, INCLUYENDO PERO NO LIMITADO A PÉRDIDA DE DATOS, INGRESOS O BENEFICIOS.
+    h2 7. Ley Aplicable
+    p Esta Licencia se regirá e interpretará de acuerdo con las leyes de los Estados Unidos Mexicanos, sin dar efecto a ninguna disposición de conflicto de leyes.
 
-    h2 8. Ley Aplicable
-    p Esta Licencia se rige por las leyes de los Estados Unidos Mexicanos. Cualquier disputa será resuelta por los tribunales competentes de la Ciudad de México, México.
-
-    h2 9. Contacto
-    p Si tiene alguna pregunta sobre esta Licencia, puede contactarnos a través de:
+    h2 8. Contacto
+    p Para cualquier consulta sobre esta Licencia:
     ul
-      li Correo electrónico: <a href="mailto:hola@pumpwrk.com">hola@pumpwrk.com</a>
-
-  footer.footer
-    div.container
-      div.footer-inner
-        div.footer-brand
-          img(src="../assets/images/logo.png", alt="Pumpwrk Logo")
-          span Pumpwrk
-        div.footer-links
-          div
-            h4 Legal
-            ul
-              li: a(href="terminos-y-condiciones.html") Términos y Condiciones
-              li: a(href="politica-de-privacidad.html") Política de Privacidad
-              li: a(href="politica-de-cookies.html") Política de Cookies
-              li: a(href="licencia.html") Licencia
-      div.footer-bottom
-        p &copy; 2026 Pumpwrk. Todos los derechos reservados.
-
-  script.
-    const savedTheme = localStorage.getItem('pw_theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+      li Correo electrónico: hola@pumpwrk.com
+      li Sitio web: www.pumpwrk.com

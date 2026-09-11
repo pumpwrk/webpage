@@ -1,0 +1,124 @@
+extends ../layouts/layout.pug
+
+block title
+  title Política de Privacidad — Pumpwrk
+
+block meta
+  meta(name="description", content="Política de Privacidad de la aplicación Pumpwrk.")
+  link(rel="icon", type="image/x-icon", href="../assets/images/favicon.ico")
+  link(rel="apple-touch-icon", sizes="180x180", href="../assets/images/apple-touch-icon.png")
+
+block content
+  nav.nav
+    div.nav-inner
+      a.nav-logo(href="../")
+        img(src="../assets/images/logo.png", alt="Pumpwrk Logo")
+        span Pumpwrk
+      ul.nav-links
+        li: a(href="../") Inicio
+        li: a(href="terminos-y-condiciones.html") Términos
+        li: a(href="politica-de-privacidad.html") Privacidad
+        li: a(href="politica-de-cookies.html") Cookies
+        li: a(href="licencia.html") Licencia
+
+  main.legal.container
+    h1 Política de Privacidad
+    p.meta Última actualización: 30 de agosto de 2026
+
+    h2 1. Información que Recopilamos
+    p Pumpwrk recopila la siguiente información cuando el Usuario utiliza la App:
+    ul
+      li
+        strong Datos de cuenta:
+        | nombre, correo electrónico, contraseña (encriptada), número de teléfono, foto de perfil.
+      li
+        strong Datos de perfil:
+        | información de membresía, gym asignado, ejercicios y rutinas.
+      li
+        strong Datos de uso:
+        | rutinas ejecutadas, sets, pesos, repeticiones, historial de workouts, progreso personal.
+      li
+        strong Datos de dispositivo:
+        | tipo de dispositivo, sistema operativo, identificadores únicos de dispositivo.
+      li
+        strong Datos de ubicación:
+        | solo si el Usuario lo autoriza explícitamente para funcionalidades específicas.
+
+    h2 2. Uso de la Información
+    p Pumpwrk utiliza la información recopilada para:
+    ul
+      li Proporcionar y mejorar el servicio de la App.
+      li Personalizar la experiencia del Usuario.
+      li Comunicarse con el Usuario sobre actualizaciones, notificaciones y soporte.
+      li Generar estadísticas y reportes agregados (sin datos personales identificables).
+      li Prevenir fraudes y garantizar la seguridad de la App.
+      li Cumplir con obligaciones legales y regulatorias.
+
+    h2 3. Compartir Información
+    p Pumpwrk no vende ni comparte información personal del Usuario con terceros, excepto en los siguientes casos:
+    ul
+      li Con el administrador del gimnasio al que pertenece el Usuario (solo datos relevantes para la gestión del gym).
+      li Con proveedores de servicios que ayudan a operar la App (alojamiento, análisis, soporte), bajo acuerdos de confidencialidad.
+      li Cuando sea requerido por ley, orden judicial o autoridad competente.
+      li En caso de fusión, adquisición o venta de activos, previa notificación al Usuario.
+
+    h2 4. Seguridad de los Datos
+    p Pumpwrk implementa medidas de seguridad técnicas y organizativas para proteger la información del Usuario, incluyendo:
+    ul
+      li Encriptación de datos en tránsito (TLS/SSL).
+      li Encriptación de contraseñas con algoritmos seguros.
+      li Control de acceso restringido a datos personales.
+      li Monitoreo y auditoría de accesos.
+    p Sin embargo, ningún método de transmisión o almacenamiento es 100% seguro, y Pumpwrk no puede garantizar la seguridad absoluta de los datos.
+
+    h2 5. Retención de Datos
+    p Pumpwrk retiene la información del Usuario durante el tiempo que su cuenta esté activa o mientras sea necesario para proporcionar el servicio. Cuando el Usuario elimina su cuenta, Pumpwrk eliminará o anonimizará los datos personales dentro de los 30 días, salvo que la ley requiera una retención más prolongada.
+
+    h2 6. Derechos del Usuario
+    p El Usuario tiene derecho a:
+    ul
+      li Acceder a sus datos personales.
+      li Rectificar datos inexactos o incompletos.
+      li Solicitar la eliminación de sus datos personales.
+      li Oponerse al tratamiento de sus datos para fines específicos.
+      li Solicitar la portabilidad de sus datos.
+      li Retirar su consentimiento en cualquier momento.
+    p Para ejercer estos derechos, el Usuario puede contactarnos a través de <a href="mailto:hola@pumpwrk.com">hola@pumpwrk.com</a>.
+
+    h2 7. Cookies y Tecnologías de Rastreo
+    p Pumpwrk puede utilizar cookies y tecnologías similares para mejorar la experiencia del Usuario. Para más información, consulte nuestra <a href="politica-de-cookies.html">Política de Cookies</a>.
+
+    h2 8. Menores de Edad
+    p Pumpwrk no está dirigido a menores de 16 años. No recopilamos intencionalmente información personal de menores de 16 años. Si descubrimos que hemos recopilado información de un menor, la eliminaremos inmediatamente.
+
+    h2 9. Transferencias Internacionales
+    p Los datos del Usuario pueden ser transferidos y procesados en países distintos al de residencia del Usuario. Pumpwrk se asegura de que dichas transferencias cumplan con las leyes de protección de datos aplicables.
+
+    h2 10. Cambios en esta Política
+    p Pumpwrk puede actualizar esta Política de Privacidad en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en la App. El uso continuado de la App después de las modificaciones constituye la aceptación de la política actualizada.
+
+    h2 11. Contacto
+    p Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos a través de:
+    ul
+      li Correo electrónico: <a href="mailto:hola@pumpwrk.com">hola@pumpwrk.com</a>
+
+  footer.footer
+    div.container
+      div.footer-inner
+        div.footer-brand
+          img(src="../assets/images/logo.png", alt="Pumpwrk Logo")
+          span Pumpwrk
+        div.footer-links
+          div
+            h4 Legal
+            ul
+              li: a(href="terminos-y-condiciones.html") Términos y Condiciones
+              li: a(href="politica-de-privacidad.html") Política de Privacidad
+              li: a(href="politica-de-cookies.html") Política de Cookies
+              li: a(href="licencia.html") Licencia
+      div.footer-bottom
+        p &copy; 2026 Pumpwrk. Todos los derechos reservados.
+
+  script.
+    const savedTheme = localStorage.getItem('pw_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);

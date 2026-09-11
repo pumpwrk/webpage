@@ -10,7 +10,7 @@ El repositorio **pumpwrk-webpage** está en medio de una migración de estructur
 
 | Épica | Descripción | Estado |
 |-------|-------------|--------|
-| [001](./001-initial-structure.md) | Estructura de proyecto y migración de assets | ⬜ Pendiente |
+| [001](./001-initial-structure.md) | Estructura de proyecto y migración de assets | ✅ **Completada** |
 | [002](./002-stylus-setup.md) | Migración de CSS a Stylus | ⬜ Pendiente |
 | [003](./003-pug-templates.md) | Migración de HTML a Pug | ⬜ Pendiente |
 | [004](./004-build-script.md) | Build script (build.js) | ⬜ Pendiente |

@@ -14,7 +14,7 @@ En medio de una migración: de HTML/CSS estático en raíz → builder con **Pug
 | [001](./epics/001-initial-structure.md) | Reorganizar a `src/` + `docs/`, copiar assets | ✅ **Completada** |
 | [002](./epics/002-stylus-setup.md) | Migrar `styles.css` → `styles.styl` | ✅ **Completada** |
 | [003](./epics/003-pug-templates.md) | Migrar `.html` → `.pug` con layout extend | ✅ **Completada** |
-| [004](./epics/004-build-script.md) | Crear `build.js` CLI + `package.json` | ⬜ Pendiente |
+| [004](./epics/004-build-script.md) | Crear `build.js` CLI + `package.json` | ✅ **Completada** |
 | [005](./epics/005-deploy-workflow.md) | Actualizar `.github/workflows/deploy.yml` | ⬜ Pendiente |
 
 ## Cómo continuar
@@ -37,8 +37,8 @@ En medio de una migración: de HTML/CSS estático en raíz → builder con **Pug
 ## Progreso
 
 - Épicas creadas: 5/5
-- Completadas: 3
-- En curso: ninguna (épica 003 terminada — listo para 004)
+- Completadas: 4
+- En curso: ninguna (épica 004 terminada — listo para 005)
 
 ## Notas
 

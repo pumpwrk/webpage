@@ -1,0 +1,14 @@
+{
+  "name": "pumpwrk-webpage",
+  "version": "1.0.0",
+  "description": "Pumpwrk landing page — static site builder",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "pug": "^3.0.3",
+    "stylus": "^0.63.0",
+    "glob": "^11.0.1"
+  }
+}

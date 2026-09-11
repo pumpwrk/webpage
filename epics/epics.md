@@ -1,5 +1,7 @@
 # Épicas — Pumpwrk Webpage Builder Migration
 
+> 📖 **Nuevo agente:** lee primero [`README.md`](./README.md) para entender el contexto y roadmap completo.
+
 ## Estado general
 
 | Épica | Título | Estado | Bloquea |

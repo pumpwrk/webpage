@@ -9,8 +9,8 @@
 | [001](./001-initial-structure.md) | Estructura de proyecto y migración de assets | ✅ **Completada** | 002, 003 |
 | [002](./002-stylus-setup.md) | Migración de CSS a Stylus | ✅ **Completada** | 004 |
 | [003](./003-pug-templates.md) | Migración de HTML a Pug | ✅ **Completada** | 004 |
-| [004](./004-build-script.md) | Build script (build.js) | ⬜ Pendiente | 005 |
-| [005](./005-deploy-workflow.md) | CI/CD: actualizar deploy workflow | ⬜ Pendiente | — |
+| [004](./004-build-script.md) | Build script (build.js) | ✅ **Completada** | 005 |
+| [005](./005-deploy-workflow.md) | CI/CD: actualizar deploy workflow | ✅ **Completada** | — |
 
 ## Reglas generales
 

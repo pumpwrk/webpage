@@ -32,17 +32,6 @@
   --pw-accent: var(--pw-volt)
   --pw-accent-contrast: #0A0A0A
 
-/* Light theme */
-[data-theme="light"]
-  --pw-bg: #F4F2EA
-  --pw-surface: #FFFFFF
-  --pw-surface-raised: #E7E5DD
-  --pw-text: #101010
-  --pw-text-muted: #5E5E59
-  --pw-border: #C9C7BF
-  --pw-accent: #B9DE00
-  --pw-accent-contrast: #0A0A0A
-
 /* ═══════════════════════════════════════════════
    RESET & BASE
    ═══════════════════════════════════════════════ */
@@ -149,9 +138,6 @@ section
   backdrop-filter blur(10px)
   border-bottom 1px solid var(--pw-border)
   padding 0.75rem 0
-
-[data-theme="light"] .nav
-  background rgba(244, 242, 234, 0.95)
 
 .nav-inner
   display flex
@@ -782,31 +768,6 @@ section
   color var(--pw-text-muted)
   font-size 0.8rem
   margin-bottom 2rem
-
-/* ═══════════════════════════════════════════════
-   THEME TOGGLE
-   ═══════════════════════════════════════════════ */
-
-.theme-toggle
-  background none
-  border 1px solid var(--pw-border)
-  color var(--pw-text-muted)
-  padding 0.5rem
-  cursor pointer
-  display flex
-  align-items center
-  justify-content center
-  width 36px
-  height 36px
-  transition all 0.2s
-
-.theme-toggle:hover
-  border-color var(--pw-accent)
-  color var(--pw-accent)
-
-.theme-toggle svg
-  width 18px
-  height 18px
 
 /* ═══════════════════════════════════════════════
    RESPONSIVE

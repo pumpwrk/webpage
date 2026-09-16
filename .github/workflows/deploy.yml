@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          PRICING_API_URL: ${{ secrets.PRICING_API_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

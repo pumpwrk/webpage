@@ -22,6 +22,34 @@ const PAGES = [
 
 const BASE_URL = 'https://pumpwrk.com';
 
+// URL del API público de brackets de pricing (sin auth). Obligatoria: no hay
+// default a propósito — el build debe fallar si no se define, nunca publicar
+// precios vacíos. En GitHub Actions viene del secret PRICING_API_URL.
+const PRICING_API_URL = process.env.PRICING_API_URL;
+
+async function fetchBrackets() {
+  if (!PRICING_API_URL) {
+    throw new Error(
+      'PRICING_API_URL no está definida. Exporta la URL del API de brackets ' +
+      '(ej. export PRICING_API_URL=http://localhost:3000/api/public/billing/brackets) ' +
+      'o regístrala como secret PRICING_API_URL en GitHub Actions.'
+    );
+  }
+
+  console.log(`🌐 Obteniendo brackets de pricing desde ${PRICING_API_URL}...`);
+  const res = await fetch(PRICING_API_URL, { signal: AbortSignal.timeout(15000) });
+  if (!res.ok) {
+    throw new Error(`El API de pricing respondió ${res.status} ${res.statusText} (${PRICING_API_URL})`);
+  }
+
+  const data = await res.json();
+  const brackets = data && data.brackets;
+  if (!Array.isArray(brackets) || brackets.length === 0) {
+    throw new Error(`El API de pricing no devolvió brackets válidos (${PRICING_API_URL})`);
+  }
+  return brackets;
+}
+
 async function clean() {
   try { await fsp.rm(DOCS, { recursive: true, force: true }); } catch {}
   await ensureDir(DOCS);
@@ -52,12 +80,21 @@ async function compileStylus() {
 }
 
 async function renderPug() {
+  const pricingBrackets = await fetchBrackets();
+  const maxCoveredClients = Math.max(...pricingBrackets.map(b => Number(b.maxClients) || 0));
+
   for (const page of PAGES) {
     const srcPath = path.join(SRC, page.src);
     const destPath = path.join(DOCS, page.dest);
     await ensureDir(path.dirname(destPath));
 
-    const html = pug.renderFile(srcPath, { pretty: true });
+    const html = pug.renderFile(srcPath, {
+      pretty: true,
+      pricingBrackets,
+      // La fila "1,001+ / Cotizar" es hardcodeada: solo se muestra si el API
+      // no cubre ese rango todavía.
+      pricingCoversCustomRange: maxCoveredClients >= 1001,
+    });
     await fsp.writeFile(destPath, html);
   }
 }

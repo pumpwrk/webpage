@@ -248,30 +248,19 @@ block content
               th Mensual
               th $/miembro
           tbody
-            tr
-              td 1 – 50
-              td $499 MXN
-              td $9.98
-            tr
-              td 51 – 100
-              td $699 MXN
-              td $6.99
-            tr
-              td 101 – 250
-              td $999 MXN
-              td $4.00
-            tr
-              td 251 – 500
-              td $1,299 MXN
-              td $2.60
-            tr
-              td 501 – 1,000
-              td $1,799 MXN
-              td $1.80
-            tr
-              td 1,001+
-              td Cotizar
-              td —
+            each bracket in pricingBrackets
+              - const minClients = Math.max(bracket.minClients, 1).toLocaleString('en-US')
+              - const maxClients = bracket.maxClients.toLocaleString('en-US')
+              - const perMember = (bracket.price / bracket.maxClients).toFixed(2)
+              tr
+                td #{minClients} – #{maxClients}
+                td $#{bracket.price.toLocaleString('en-US')} MXN
+                td $#{perMember}
+            if !pricingCoversCustomRange
+              tr
+                td 1,001+
+                td Cotizar
+                td —
         p.pricing-note Precios + IVA. Solo pagas por miembros activos en el mes.
 
       div.founding-banner

@@ -45,6 +45,19 @@ python3 -m http.server 8000
 
 Luego visita `http://localhost:8000`.
 
+## Variables de entorno
+
+El build arma la sección "Planes para tu gimnasio" consumiendo el API público de brackets de pricing (sin auth). La URL se lee de `PRICING_API_URL` y es **obligatoria** — si no está definida, el build falla.
+
+```bash
+# desarrollo local
+export PRICING_API_URL=http://localhost:3000/api/public/billing/brackets
+npm run build
+
+# producción (mismo valor que el secret PRICING_API_URL en GitHub Actions)
+export PRICING_API_URL=https://api.pumpwrk.com/api/public/billing/brackets
+```
+
 ## Deploy a GitHub Pages
 
 1. Crear un repo separado en GitHub
